@@ -29,5 +29,13 @@ client.on('message', message => {
     if (!command) return
 
     command.run(message, args, client)
+})
 
+client.on('guildMemberAdd', member => {
+    member.guild.channels.cache.get(config.greeting.channel).send(`${membre} a rejoint le serveur Diginamic, nous sommes désormais ${member.guild.memberCount} ! 🎉 🎉`)
+    member.roles.add(config.greeting.role)
+})
+
+client.on('guildMemberRemove', member => {
+    member.guild.channels.cache.get(config.greeting.channel).send(`${membre.user.tag} a quitté le serveur Diginamic... 😢`)
 })
