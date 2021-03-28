@@ -3,18 +3,18 @@
 A simple discord bot that helps you manage your server.
 
 ## Environnement 
-### Prerequisite
+### Requirements
 
 * Node 14.16.0 LTS 
 
 
-### Init Node js 
+### Installation
 
 ```bash
-npm init 
-```
-### Install Discord.js
-
-```
-npm i discord.js
+# Clone the repository
+git clone https://gitlab.com/melheb.younes/discord-bot
+# Enter into the directory
+cd discord-bot/
+# Install the dependencies
+npm install
 ```
