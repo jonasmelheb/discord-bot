@@ -36,7 +36,7 @@ client.on('guildMemberAdd', member => {
         .setTitle('Bienvenue')
         .setDescription(`${membre} a rejoint le serveur **Diginamic**, nous sommes désormais ${member.guild.memberCount} ! 🎉 🎉`)
         .setColor('GREEN')
-        .setTimestamp)
+        .setTimestamp())
     member.roles.add(config.greeting.role)
 })
 
