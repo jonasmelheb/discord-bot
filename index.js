@@ -34,7 +34,7 @@ client.on('message', message => {
 })
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.cache.get(config.greeting.channel).send(new Discord.MessageEmbed()
+    member.guild.channels.cache.get(config.greeting.channel).send(`${member}`, new Discord.MessageEmbed()
         .setTitle('Bienvenue')
         .setDescription(`${membre} a rejoint le serveur **Diginamic**, nous sommes désormais ${member.guild.memberCount} ! 🎉 🎉`)
         .setColor('GREEN')

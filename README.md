@@ -18,3 +18,10 @@ cd discord-bot/
 # Install the dependencies
 npm install
 ```
+### Create the bot 
+[Documentation](https://gitlab.com/melheb.younes/discord-bot/-/wikis/Create-a-bot-in-discord-application)
+### Lunch the bot
+```bash
+node index.js
+```
+
