@@ -36,7 +36,7 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     member.guild.channels.cache.get(config.greeting.channel).send(`${member}`, new Discord.MessageEmbed()
         .setTitle('Bienvenue')
-        .setDescription(`${membre} a rejoint le serveur **Diginamic**, nous sommes désormais ${member.guild.memberCount} ! 🎉 🎉`)
+        .setDescription(`${member} a rejoint le serveur **Diginamic**, nous sommes désormais ${member.guild.memberCount} ! 🎉 🎉`)
         .setColor('GREEN')
         .setTimestamp())
     member.roles.add(config.greeting.role)
@@ -45,6 +45,6 @@ client.on('guildMemberAdd', member => {
 client.on('guildMemberRemove', member => {
     member.guild.channels.cache.get(config.greeting.channel).send(new Discord.MessageEmbed()
         .setTitle('Au revoir')
-        .setDescription(`${membre.user.tag} a quitté le serveur **Diginamic**... 😢`))
-        .setColor('RED')
+        .setDescription(`${member.user.tag} a quitté le serveur **Diginamic**... 😢`)
+        .setColor('RED'))
 })
