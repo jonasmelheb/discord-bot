@@ -1,4 +1,4 @@
-image: node
+image: node:latest
 
 stages:
   - lint
@@ -6,15 +6,9 @@ stages:
 eslint:
   stage: lint
   script:
-    # Install eslint
-    - |
-      npm install eslint \
-      eslint-config-airbnb \
-      eslint-config-prettier \
-      eslint-plugin-flowtype \ # Any ideas on what I might want to do next?
-      eslint-plugin-import \
-      eslint-plugin-jsx-a11y \
-      eslint-plugin-prettier \
-      eslint-plugin-react
-    # Run eslint
-    - node_modules/eslint/bin/eslint.js .
+    # Install ESLint in this docker container
+    - npm install -g eslint
+    # Configure ESLint (will read your .eslintrc file)
+    - eslint --init
+    # Run ESLint
+    - eslint .
