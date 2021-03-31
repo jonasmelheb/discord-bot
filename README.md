@@ -20,8 +20,13 @@ npm install
 ```
 ### Create the bot 
 [Documentation](https://gitlab.com/melheb.younes/discord-bot/-/wikis/Create-a-bot-in-discord-application)
+
+### Configuration
+[Documentation](https://gitlab.com/melheb.younes/discord-bot/-/wikis/Configuration)
 ### Lunch the bot
 ```bash
-node index.js
+node index
 ```
+
+Now you can use the bot 
 
